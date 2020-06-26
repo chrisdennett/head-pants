@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const transition = {
-  duration: 2,
-  times: [0, 0.2, 1],
-};
-
 export const Title = () => {
   return (
     <svg
