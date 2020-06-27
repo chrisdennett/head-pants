@@ -31,14 +31,35 @@ h1 {
   background-color: rgb(255, 107, 0);
 }
 
+.bgYellow {
+  background-color: rgb(255, 200, 67);
+}
+
 .bgPurple {
   background-color: rgb(210, 67, 176);
 }
 
 .highlight {
-  background-color: rgb(255, 200, 67);
   padding: 0 10px 0 5px;
   font-style: italic;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .standout {
@@ -58,6 +79,7 @@ section * {
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 10px;
 }
 
 /* over ride for section header to allow it to be full width */
@@ -82,4 +104,18 @@ h2 {
 p {
   font-size: 1.5em;
   line-height: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  .intro {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
 }

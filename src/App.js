@@ -12,9 +12,9 @@ function App() {
         </h1>
         <Logo />
         <p className="intro">
-          Project <span className="highlight">#headpants</span> is one town's
-          mission to persuade Guinness that a mass headpant clad gathering is
-          worthy of a record!
+          Project <span className="highlight bgYellow">#headpants</span> is one
+          town's mission to persuade the Guinness Records folk that a mass
+          headpant clad gathering is worthy of a record!
         </p>
       </header>
 
@@ -23,21 +23,21 @@ function App() {
           <h3>How to get involved</h3>
         </div>
         <p>
-          Good people of the world, we call upon you to don your underpants like
-          a hat and post a picture on the socials with the hashtag #headpants.
+          Good people of the world 🌍, we call upon you to don underpants as
+          hats and post selfies📷 on the socials with the #headpants hashtag.
         </p>
         <p>
-          Together we shall fight the marginisation of those who choosing
-          undercrackers as headwear. Come out of the shadows and together we'll
-          show the Guiness World that we are not too specialised. WE ARE ALL
-          HEADPANTERS.
+          Together we'll fight the marginisation of those choosing undercrackers
+          as headwear 😀🩲! Come out of the shadows and together we'll show the
+          Guiness Peeps that we are not "too specialised".{" "}
+          <span className="highlight bgOrange">WE ARE ALL HEADPANTERS!</span>
         </p>
         <p>
-          Let's show them that the Headpant community is global, from every age,
-          nationality, gender identity, sexual orientation, race, ethnicity,
-          language, neuro-type, size, disability, class, religion, culture,
-          subculture, political opinion, skill level, occupation, and
-          background. HEADPANTERS UNITE!
+          Headpanters come from every age, nationality, gender identity, sexual
+          orientation, race, ethnicity, language, neuro-type, size, disability,
+          class, religion, culture, subculture, political opinion, skill level,
+          occupation, and background.{" "}
+          <span className="highlight bgOrange">HEADPANTERS UNITE!</span>
         </p>
       </section>
 
@@ -116,15 +116,25 @@ function App() {
           generate considerable pride for the town. People here are eager for
           another Record challenge to again show the world that when it comes to
           upholding the fun-loving spirit of Stan-our-man, Ulverston is
-          officially amazing. (See{" "}
-          <a href="https://youtu.be/X0cU2rjxTHc">
-            https://youtu.be/X0cU2rjxTHc
-          </a>{" "}
-          for a quick introduction to the festival, more at{" "}
+          officially amazing.
+        </p>
+
+        <p>For a quick introduction to the festival:</p>
+
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube.com/embed/X0cU2rjxTHc"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <p>
+          More at{" "}
           <a href="https://www.facebook.com/anotherfinefest">
             facebook.com/anotherfinefest
           </a>
-          )
+          .
         </p>
       </section>
     </div>

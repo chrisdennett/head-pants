@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Title = () => {
   return (
-    <div style={{ maxWidth: 500, margin: "0 auto 20px auto" }}>
+    <div style={{ maxWidth: 500, margin: "0 auto 20px auto", padding: 10 }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg1060"
