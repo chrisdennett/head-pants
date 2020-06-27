@@ -141,7 +141,7 @@ function App() {
 
         <div className="embed-container">
           <iframe
-            src="https://www.youtube.com/embed/X0cU2rjxTHc"
+            src="https://www.youtube-nocookie.com/embed/X0cU2rjxTHc"
             title="Another Fine Fest Promo"
             frameBorder="0"
             allowFullScreen
