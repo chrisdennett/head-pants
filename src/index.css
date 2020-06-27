@@ -1,15 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 body {
   margin: 0;
   background-image: url("/bg-icon.png");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Raleway", sans-serif;
 }
 
 header {
   text-align: center;
-  margin: 0;
+  margin: 0 0 50px 0;
 }
 
 h1 {
   margin: 0;
+}
+
+.intro {
+  font-size: 2em;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.bgGreen {
+  background-color: rgb(5, 206, 124);
+}
+
+.bgOrange {
+  background-color: rgb(255, 107, 0);
+}
+
+.bgPurple {
+  background-color: rgb(210, 67, 176);
+}
+
+.highlight {
+  background-color: rgb(255, 200, 67);
+  padding: 0 10px 0 5px;
+  font-style: italic;
+}
+
+.standout {
+  text-align: center;
+  border-top: 3px solid rgb(5, 206, 124);
+  border-bottom: 3px solid rgb(5, 206, 124);
+  color: rgb(5, 206, 124);
+  font-weight: bold;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+/* set max size for everything in a section */
+section * {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* over ride for section header to allow it to be full width */
+.sectionHeader {
+  max-width: 100%;
+}
+
+.sectionHeader h3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.5em;
 }
