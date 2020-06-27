@@ -23,13 +23,24 @@ function App() {
           <h3>How to get involved</h3>
         </div>
         <p>
-          Good people of the world 🌍, we call upon you to don underpants as
-          hats and post selfies📷 on the socials with the #headpants hashtag.
+          Good people of the world{" "}
+          <span role="img" aria-label="globe">
+            🌍
+          </span>
+          , we call upon you to don underpants as hats and post selfies
+          <span role="img" aria-label="camera">
+            📷
+          </span>{" "}
+          on the socials with the #headpants hashtag.
         </p>
         <p>
           Together we'll fight the marginisation of those choosing undercrackers
-          as headwear 😀🩲! Come out of the shadows and together we'll show the
-          Guiness Peeps that we are not "too specialised".{" "}
+          as headwear{" "}
+          <span role="img" aria-label="happy face">
+            😀🩲
+          </span>
+          ! Come out of the shadows and together we'll show the Guiness Peeps
+          that we are not "too specialised".{" "}
           <span className="highlight bgOrange">WE ARE ALL HEADPANTERS!</span>
         </p>
         <p>
@@ -46,15 +57,22 @@ function App() {
           <h3>Background:</h3>
         </div>
         <p>
-          With 2 Guinness World Records 🏆🏆 in the bag a plucky band of
-          Ulverstonians decided to push things up a notch and go for a third
-          record as yet unlisted in the book! 📖
+          With 2 Guinness World Records{" "}
+          <span role="img" aria-label="trophies">
+            🏆🏆
+          </span>{" "}
+          in the bag a plucky band of Ulverstonians decided to push things up a
+          notch and go for a third record as yet unlisted in the book! 📖
         </p>
         <p className="standout">
           Largest gathering of people wearing underpants on their head.
         </p>
         <p>
-          The application was submitted in January, but we were rejected 😭😭😭:
+          The application was submitted in January, but we were rejected{" "}
+          <span role="img" aria-label="crying face">
+            😭😭😭
+          </span>
+          :
         </p>
         <p className="quote">
           "While we certainly do not underestimate your proposal, we think that
@@ -121,11 +139,12 @@ function App() {
 
         <p>For a quick introduction to the festival:</p>
 
-        <div class="embed-container">
+        <div className="embed-container">
           <iframe
             src="https://www.youtube.com/embed/X0cU2rjxTHc"
-            frameborder="0"
-            allowfullscreen
+            title="Another Fine Fest Promo"
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
         </div>
 
