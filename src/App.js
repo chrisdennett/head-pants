@@ -2,6 +2,7 @@ import React from "react";
 
 import { Title } from "./comps/Title";
 import { Logo } from "./comps/Logo";
+import Emoji from "./comps/Emoji";
 
 function App() {
   return (
@@ -23,24 +24,17 @@ function App() {
           <h3>How to get involved</h3>
         </div>
         <p>
-          Good people of the world{" "}
-          <span role="img" aria-label="globe">
-            🌍
-          </span>
-          , we call upon you to don underpants as hats and post selfies
-          <span role="img" aria-label="camera">
-            📷
-          </span>{" "}
+          Good people of the world <Emoji symbol="🌍" label="globe" />, we call
+          upon you to don underpants as hats and post selfies
+          <Emoji symbol="📷" label="camera" />
           on the socials with the #headpants hashtag.
         </p>
         <p>
           Together we'll fight the marginisation of those choosing undercrackers
-          as headwear{" "}
-          <span role="img" aria-label="happy face">
-            😀🩲
-          </span>
-          ! Come out of the shadows and together we'll show the Guiness Peeps
-          that we are not "too specialised".{" "}
+          as headwear <Emoji symbol="😀" label="happy face" />
+          <Emoji symbol="🩲" label="underpants" />! Come out of the shadows and
+          together we'll show the Guiness Peeps that we are not "too
+          specialised".{" "}
           <span className="highlight bgOrange">WE ARE ALL HEADPANTERS!</span>
         </p>
         <p>
@@ -57,22 +51,19 @@ function App() {
           <h3>Background:</h3>
         </div>
         <p>
-          With 2 Guinness World Records{" "}
-          <span role="img" aria-label="trophies">
-            🏆🏆
-          </span>{" "}
-          in the bag a plucky band of Ulverstonians decided to push things up a
-          notch and go for a third record as yet unlisted in the book! 📖
+          With 2 Guinness World Records <Emoji symbol="🏆" label="trophy" />
+          <Emoji symbol="🏆" label="trophy" /> in the bag a plucky band of
+          Ulverstonians decided to push things up a notch and go for a third
+          record as yet unlisted in the book! <Emoji symbol="📖" label="book" />
         </p>
         <p className="standout">
           Largest gathering of people wearing underpants on their head.
         </p>
         <p>
           The application was submitted in January, but we were rejected{" "}
-          <span role="img" aria-label="crying face">
-            😭😭😭
-          </span>
-          :
+          <Emoji symbol="😭" label="crying face" />
+          <Emoji symbol="😭" label="crying face" />
+          <Emoji symbol="😭" label="crying face" />:
         </p>
         <p className="quote">
           "While we certainly do not underestimate your proposal, we think that
