@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "../comps/Title";
 import { Logo } from "../comps/Logo";
 import Emoji from "../comps/Emoji";
-import Nav from "../comps/Nav";
+// import Nav from "../comps/Nav";
 
 const Home = ({ logoSettings }) => {
   return (
