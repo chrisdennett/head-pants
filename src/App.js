@@ -10,6 +10,7 @@ const defaultLogoSettings = {
   Pants: "#c71303",
   Trim: "#fbfbf0",
 };
+// Pants: "#c71303",
 
 function App() {
   const [logoSettings, setLogoSettings] = useState(defaultLogoSettings);

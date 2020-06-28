@@ -15,7 +15,17 @@ const globalColours = [
 ];
 
 const options = {
-  Hairdo: ["none", "hair1"],
+  Hairdo: [
+    "none",
+    "hair1",
+    "hair2",
+    "hair3",
+    "hair4",
+    "hair5",
+    "hair6",
+    "hair7",
+    "hair8",
+  ],
   Hair: ["#9e5143", "#a19f9b", ...globalColours],
   Skin: ["#5e3132", "#8d5524", "#deaa87", "#ffdbac", ...globalColours],
   Pants: [...globalColours],
