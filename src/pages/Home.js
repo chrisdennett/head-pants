@@ -8,7 +8,7 @@ const Home = ({ logoSettings }) => {
   return (
     <div>
       <header>
-        <Nav />
+        {/* <Nav /> */}
         <h1>
           <Title />
         </h1>
