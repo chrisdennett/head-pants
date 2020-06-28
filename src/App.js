@@ -4,7 +4,12 @@ import { Router } from "@reach/router";
 import Home from "./pages/Home";
 import BadgeMaker from "./pages/BadgeMaker";
 
-const defaultLogoSettings = { hair: "hair1" };
+const defaultLogoSettings = {
+  Hairdo: "hair1",
+  Skin: "#deaa87",
+  Pants: "#c71303",
+  Trim: "#fbfbf0",
+};
 
 function App() {
   const [logoSettings, setLogoSettings] = useState(defaultLogoSettings);

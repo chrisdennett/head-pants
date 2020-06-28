@@ -3,32 +3,70 @@ import { Logo } from "../comps/Logo";
 import styled from "styled-components";
 import Nav from "../comps/Nav";
 
+const globalColours = [
+  "#fbfbf0",
+  "#2e2e30",
+  "#ff4338",
+  "#ff6b00",
+  "#ffc843",
+  "#05ce7c",
+  "#00b3e3",
+  "#da3ab3",
+];
+
 const options = {
-  hairdo: ["none", "hair1"],
-  hair: ["#000000", "#FF0000"],
-  skin: ["#000000", "#FF0000"],
+  Hairdo: ["none", "hair1"],
+  Hair: ["#9e5143", "#a19f9b", ...globalColours],
+  Skin: ["#5e3132", "#8d5524", "#deaa87", "#ffdbac", ...globalColours],
+  Pants: [...globalColours],
+  Trim: [...globalColours],
 };
 
-const optionTypes = ["Hairdo", "Hair", "Skin", "Pants", "Trim"];
+const optionTypes = Object.keys(options);
 
 const BadgeMaker = ({ logoSettings, setLogoSettings }) => {
-  const [currType, setCurrType] = useState(0);
+  const [currCategory, setCurrCategory] = useState(2);
+  const currOptionKey = optionTypes[currCategory];
+  const currOptions = options[currOptionKey];
+
+  const onOptionSelect = (updatedOption) => {
+    setLogoSettings({ ...logoSettings, ...updatedOption });
+  };
 
   return (
     <Outer>
       <Nav />
       <Logo settings={logoSettings} size={400} />
-      <OptionTypes>
-        {optionTypes.map((type, index) => (
-          <OptionType
-            key={type}
-            selected={currType === index}
-            onClick={() => setCurrType(index)}
-          >
-            {type}
-          </OptionType>
-        ))}
-      </OptionTypes>
+
+      <Controls>
+        <Categories>
+          {optionTypes.map((type, index) => (
+            <Category
+              key={type}
+              selected={currCategory === index}
+              onClick={() => setCurrCategory(index)}
+            >
+              {type}
+            </Category>
+          ))}
+        </Categories>
+
+        <CurrentOptions>
+          {currOptions.map((option) => (
+            <Option
+              key={option}
+              onClick={() => onOptionSelect({ [currOptionKey]: option })}
+            >
+              <Logo
+                settings={{
+                  ...logoSettings,
+                  [currOptionKey]: option,
+                }}
+              />
+            </Option>
+          ))}
+        </CurrentOptions>
+      </Controls>
     </Outer>
   );
 };
@@ -41,12 +79,18 @@ const Outer = styled.div`
   align-items: center;
 `;
 
-const OptionTypes = styled.div`
-  margin-top: 20px;
+const Controls = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
+
+const Categories = styled.div`
   display: flex;
 `;
 
-const OptionType = styled.div`
+const Category = styled.div`
   padding: 5px 10px;
   cursor: pointer;
   background: ${(props) => (props.selected ? "black" : "white")};
@@ -56,4 +100,13 @@ const OptionType = styled.div`
   font-size: 20px;
   font-weight: bold;
   border-radius: 3px;
+`;
+
+const CurrentOptions = styled.div`
+  display: flex;
+  overflow-x: scroll;
+`;
+
+const Option = styled.div`
+  padding: 20px;
 `;

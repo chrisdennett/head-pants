@@ -1,7 +1,15 @@
 import React from "react";
 
 export const Logo = ({ settings, size = 120 }) => {
-  const { hair = "none", skinColour = "#deaa87" } = settings;
+  const {
+    Hairdo = "none",
+    Hair = "",
+    Skin = "#deaa87",
+    Pants = "#c71303",
+    Trim = "#fbfbf0",
+  } = settings;
+
+  const Bobble = "#ff0";
 
   return (
     <svg
@@ -24,7 +32,7 @@ export const Logo = ({ settings, size = 120 }) => {
       >
         <g
           id="skin"
-          fill={skinColour}
+          fill={Skin}
           fillOpacity="1"
           stroke="#2b1100"
           strokeWidth="3.528"
@@ -96,10 +104,10 @@ export const Logo = ({ settings, size = 120 }) => {
           overflow="visible"
         ></path>
       </g>
-      <g id="layer2" display="inline">
+      <g id="layer2" display="inline" fill={Hair}>
         <g
           id="hair-1"
-          style={hair === "hair1" ? {} : { display: "none" }}
+          style={Hairdo === "hair1" ? {} : { display: "none" }}
           fillOpacity="1"
           stroke="#000"
           strokeDasharray="none"
@@ -116,7 +124,6 @@ export const Logo = ({ settings, size = 120 }) => {
           >
             <path
               id="path1689"
-              fill="#000"
               strokeWidth="0.542"
               d="M3.048 87.225s.093-2.122 6.576-7.51c0 0 5.694 4.655 6.24 6.792"
               overflow="visible"
@@ -127,7 +134,7 @@ export const Logo = ({ settings, size = 120 }) => {
               height="3.494"
               x="6.881"
               y="78.244"
-              fill="#ff0"
+              fill={Bobble}
               strokeWidth="0.517"
               overflow="visible"
               rx="0.434"
@@ -135,7 +142,6 @@ export const Logo = ({ settings, size = 120 }) => {
             ></rect>
             <path
               id="path1693"
-              fill="#000"
               strokeWidth="0.547"
               d="M2.525 55.535c-.533.63-.133 1.504-.896 1.825-1.112.468-1.726-.365-2.923-.256-.823.074-1.121 1.03-1.885.714-1.112-.46-.967-1.501-1.885-2.28-.63-.534-1.498-.074-1.814-.84-.46-1.113.376-1.728.27-2.929-.072-.825-1.031-1.12-.71-1.882.469-1.111 1.475-.995 2.255-1.916.535-.632.1-1.49.868-1.802 1.118-.455 1.7.39 2.9.285.826-.073 1.142-1.028 1.906-.711 1.111.462.995 1.498 1.915 2.276.632.534 1.468.054 1.782.82.457 1.113-.35 1.73-.24 2.931.077.825 1.03 1.118.71 1.882-.465 1.114-1.476.966-2.253 1.883z"
               overflow="visible"
@@ -149,7 +155,6 @@ export const Logo = ({ settings, size = 120 }) => {
           >
             <path
               id="path1672"
-              fill="#000"
               strokeWidth="0.542"
               d="M3.048 87.225s.093-2.122 6.576-7.51c0 0 5.694 4.655 6.24 6.792"
               overflow="visible"
@@ -160,7 +165,7 @@ export const Logo = ({ settings, size = 120 }) => {
               height="3.494"
               x="6.881"
               y="78.244"
-              fill="#ff0"
+              fill={Bobble}
               strokeWidth="0.517"
               overflow="visible"
               rx="0.453"
@@ -168,7 +173,6 @@ export const Logo = ({ settings, size = 120 }) => {
             ></rect>
             <path
               id="path1670"
-              fill="#000"
               strokeWidth="0.547"
               d="M2.525 55.535c-.533.63-.133 1.504-.896 1.825-1.112.468-1.726-.365-2.923-.256-.823.074-1.121 1.03-1.885.714-1.112-.46-.967-1.501-1.885-2.28-.63-.534-1.498-.074-1.814-.84-.46-1.113.376-1.728.27-2.929-.072-.825-1.031-1.12-.71-1.882.469-1.111 1.475-.995 2.255-1.916.535-.632.1-1.49.868-1.802 1.118-.455 1.7.39 2.9.285.826-.073 1.142-1.028 1.906-.711 1.111.462.995 1.498 1.915 2.276.632.534 1.468.054 1.782.82.457 1.113-.35 1.73-.24 2.931.077.825 1.03 1.118.71 1.882-.465 1.114-1.476.966-2.253 1.883z"
               overflow="visible"
@@ -180,7 +184,7 @@ export const Logo = ({ settings, size = 120 }) => {
       <g id="layer3" display="inline">
         <g
           id="pants-main"
-          fill="#c71303"
+          fill={Pants}
           fillOpacity="1"
           stroke="#000"
           strokeDasharray="none"
@@ -212,7 +216,7 @@ export const Logo = ({ settings, size = 120 }) => {
         <g id="pants-seam">
           <path
             id="path1789"
-            fill="#fbfbf0"
+            fill={Trim}
             fillOpacity="1"
             stroke="#000"
             strokeDasharray="none"
