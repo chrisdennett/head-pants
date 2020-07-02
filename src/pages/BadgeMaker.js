@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Logo } from "../comps/Logo";
 import styled from "styled-components";
-import Nav from "../comps/Nav";
+import { Nav } from "../comps/Nav";
 
 const globalColours = [
   "#fbfbf0",
@@ -34,7 +34,7 @@ const options = {
 
 const optionTypes = Object.keys(options);
 
-const BadgeMaker = ({ logoSettings, setLogoSettings }) => {
+export const BadgeMaker = ({ logoSettings, setLogoSettings }) => {
   const [currCategory, setCurrCategory] = useState(2);
   const currOptionKey = optionTypes[currCategory];
   const currOptions = options[currOptionKey];
@@ -44,49 +44,62 @@ const BadgeMaker = ({ logoSettings, setLogoSettings }) => {
   };
 
   return (
-    <Outer>
-      <Nav />
-      <Logo settings={logoSettings} size={400} />
+    <>
+      <div>
+        <Nav />
+      </div>
+      <Outer>
+        <Logo settings={logoSettings} size={400} />
 
-      <Controls>
-        <Categories>
-          {optionTypes.map((type, index) => (
-            <Category
-              key={type}
-              selected={currCategory === index}
-              onClick={() => setCurrCategory(index)}
-            >
-              {type}
-            </Category>
-          ))}
-        </Categories>
+        <Controls>
+          <Categories>
+            {optionTypes.map((type, index) => (
+              <Category
+                key={type}
+                selected={currCategory === index}
+                onClick={() => setCurrCategory(index)}
+              >
+                {type}
+              </Category>
+            ))}
+          </Categories>
 
-        <CurrentOptions>
-          {currOptions.map((option) => (
-            <Option
-              key={option}
-              onClick={() => onOptionSelect({ [currOptionKey]: option })}
-            >
-              <Logo
-                settings={{
-                  ...logoSettings,
-                  [currOptionKey]: option,
-                }}
-              />
-            </Option>
-          ))}
-        </CurrentOptions>
-      </Controls>
-    </Outer>
+          <CurrentOptions>
+            {currOptions.map((option) => (
+              <Option
+                key={option}
+                onClick={() => onOptionSelect({ [currOptionKey]: option })}
+              >
+                <Logo
+                  settings={{
+                    ...logoSettings,
+                    [currOptionKey]: option,
+                  }}
+                />
+              </Option>
+            ))}
+          </CurrentOptions>
+        </Controls>
+      </Outer>
+    </>
   );
 };
 
-export default BadgeMaker;
-
+// STYLES
 const Outer = styled.div`
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const Controls = styled.div`
@@ -94,13 +107,18 @@ const Controls = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
 const Categories = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const Category = styled.div`
+  flex: 1;
+  text-align: center;
   padding: 5px 10px;
   cursor: pointer;
   background: ${(props) => (props.selected ? "black" : "white")};
@@ -118,5 +136,7 @@ const CurrentOptions = styled.div`
 `;
 
 const Option = styled.div`
-  padding: 20px;
+  padding: 5px 20px;
+  width: 100px;
+  min-width: 100px;
 `;

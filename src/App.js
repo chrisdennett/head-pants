@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Router } from "@reach/router";
 // pages
-import Home from "./pages/Home";
-import BadgeMaker from "./pages/BadgeMaker";
+import { Home } from "./pages/Home";
+import { BadgeMaker } from "./pages/BadgeMaker";
+import { Application } from "./pages/Application";
 
 const defaultLogoSettings = {
   Hairdo: "hair1",
@@ -16,16 +17,15 @@ function App() {
   const [logoSettings, setLogoSettings] = useState(defaultLogoSettings);
 
   return (
-    <div>
-      <Router>
-        <Home path="/" logoSettings={logoSettings} />
-        <BadgeMaker
-          path="/badge"
-          logoSettings={logoSettings}
-          setLogoSettings={setLogoSettings}
-        />
-      </Router>
-    </div>
+    <Router>
+      <Home path="/" logoSettings={logoSettings} />
+      <Application path="/application" logoSettings={logoSettings} />
+      <BadgeMaker
+        path="/badge"
+        logoSettings={logoSettings}
+        setLogoSettings={setLogoSettings}
+      />
+    </Router>
   );
 }
 
