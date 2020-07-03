@@ -1,6 +1,6 @@
 import React from "react";
-import { Title } from "../comps/Title";
-import { Logo } from "../comps/Logo";
+// import { Title } from "../comps/Title";
+// import { Logo } from "../comps/Logo";
 import { Nav } from "../comps/Nav";
 // import Emoji from "../comps/Emoji";
 // import Nav from "../comps/Nav";
@@ -8,8 +8,8 @@ import { Nav } from "../comps/Nav";
 export const Application = ({ logoSettings }) => {
   return (
     <div>
-      <header>
-        <Nav />
+      <Nav />
+      {/* <header>
         <h1>
           <Title />
         </h1>
@@ -19,10 +19,10 @@ export const Application = ({ logoSettings }) => {
           town's mission to persuade the Guinness Records folk that a mass
           headpant clad gathering is worthy of a record!
         </p>
-      </header>
+      </header> */}
 
       <section>
-        <div className="sectionHeader bgPurple">
+        <div className="sectionHeader bgPurple" style={{ paddingTop: 50 }}>
           <h3>Our "Currently" Rejected Application:</h3>
         </div>
 

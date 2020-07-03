@@ -7,7 +7,7 @@ import { Nav } from "../comps/Nav";
 export const Home = ({ logoSettings }) => {
   return (
     <div>
-      <header>
+      <div className="header">
         <Nav />
         <h1>
           <Title />
@@ -18,7 +18,7 @@ export const Home = ({ logoSettings }) => {
           town's mission to persuade the Guinness Records folk that a mass
           headpant clad gathering is worthy of a record!
         </p>
-      </header>
+      </div>
 
       <section>
         <div className="sectionHeader bgOrange">

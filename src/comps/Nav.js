@@ -10,14 +10,15 @@ export const Nav = () => {
     <div>
       <StyledNav>
         <NavLink to="/">
-          <FaHome /> Home
+          <FaHome />
+          <span className="hideOnMobile"> Home</span>
         </NavLink>{" "}
         <NavLink to="/application" ismiddle="true">
-          <TiDocumentText /> Application
+          <TiDocumentText /> <span className="hideOnMobile"> Application</span>
         </NavLink>
         <NavLink to="/badge">
           <MdFace />
-          Badge Maker
+          <span className="hideOnMobile"> Badge Maker</span>
         </NavLink>
       </StyledNav>
     </div>
@@ -33,7 +34,7 @@ const NavLink = (props) => {
         // anchor element's props
         return {
           style: {
-            background: isCurrent ? "rgba(0,0,0,0.8)" : "whitesmoke",
+            background: isCurrent ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.8)",
             color: isCurrent ? "whitesmoke" : "rgba(0,0,0,0.8)",
           },
         };
@@ -52,10 +53,12 @@ const StyledNav = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-  padding: 10px;
+  padding: 5px;
+  height: 42px;
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
