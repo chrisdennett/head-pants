@@ -49,6 +49,7 @@ const StyledNav = styled.nav`
   left: 0;
   right: 0;
   display: flex;
+  z-index: 10;
   justify-content: center;
 `;
 
