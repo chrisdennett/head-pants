@@ -3,6 +3,7 @@ import { Title } from "../comps/Title";
 import { Logo } from "../comps/Logo";
 import Emoji from "../comps/Emoji";
 import { Nav } from "../comps/Nav";
+import { Link } from "@reach/router";
 
 export const Home = ({ logoSettings }) => {
   return (
@@ -61,10 +62,11 @@ export const Home = ({ logoSettings }) => {
           Largest gathering of people wearing underpants on their head.
         </p>
         <p>
-          The application was submitted in January, but we were rejected{" "}
+          Our <Link to={"/application"}>application</Link> was submitted in
+          January, but was rejected <Emoji symbol="😭" label="crying face" />
           <Emoji symbol="😭" label="crying face" />
           <Emoji symbol="😭" label="crying face" />
-          <Emoji symbol="😭" label="crying face" />:
+          !!!!
         </p>
         <p className="quote">
           "While we certainly do not underestimate your proposal, we think that

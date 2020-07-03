@@ -23,6 +23,13 @@ h1 {
   margin: 20px auto;
 }
 
+.quote {
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 20px;
+}
+
 .bgGreen {
   background-color: rgb(5, 206, 124);
 }

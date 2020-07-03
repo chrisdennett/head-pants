@@ -38,6 +38,9 @@ const Outer = styled.div`
 const Title = styled.div`
   font-size: 16px;
   text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: white;
 `;
 
 const Options = styled.div`
