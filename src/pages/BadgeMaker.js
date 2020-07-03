@@ -59,10 +59,10 @@ export const BadgeMaker = ({ logoSettings, setLogoSettings }) => {
   };
 
   const saveBadge = () => {
-    saveSvgAsPng(document.getElementById("badge"), "diagram.png", {
+    saveSvgAsPng(document.getElementById("badge"), "headpants-badge.png", {
       left: -40,
       top: -31,
-      scale: 2,
+      scale: 3,
     });
   };
 
